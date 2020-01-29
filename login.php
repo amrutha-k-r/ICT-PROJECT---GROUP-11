@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
     <?php
 // Initialize the session
@@ -24,7 +24,7 @@ if(isset($_POST['log']))
 
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
-            echo "here";
+//            echo "here";
             while($row = mysqli_fetch_assoc($result)) {
                 if(strcmp($row['empid'], $eid)==0 )
                 {
@@ -43,18 +43,20 @@ if(isset($_POST['log']))
                     }
                     else
                     {
-                        echo "\nPassword Mismatch";
+                        echo "<script>alert('Password Mismatch');</script>";
+                        
                     }
                     
                 }
                 else
                 { 
-                    echo "<br".$row['password'];
-                    echo "\nFailed";
+//                    echo "<br".$row['password'];
+                    echo "<script>alert('Login Failed.. Invalid Details');</script>";
+                    break;
                 }
             }
         } else {
-            echo "0 results";
+            echo "Error in Database Selection";
         }
     
         
@@ -108,14 +110,14 @@ if(isset($_POST['log']))
           justify-content: center;
           width: 100%;
           min-height: 100%;
-          padding: 20px;
+          padding: 5px;
         }
 
         #formContent {
           -webkit-border-radius: 10px 10px 10px 10px;
           border-radius: 10px 10px 10px 10px;
           background: #fff;
-          padding: 30px;
+          padding: 15px;
           width: 90%;
           max-width: 450px;
           position: relative;
@@ -128,7 +130,7 @@ if(isset($_POST['log']))
         #formFooter {
           background-color: #f6f6f6;
           border-top: 1px solid #dce8f1;
-          padding: 25px;
+          padding: 10px;
           text-align: center;
           -webkit-border-radius: 0 0 10px 10px;
           border-radius: 0 0 10px 10px;
@@ -185,7 +187,7 @@ if(isset($_POST['log']))
           transform: scale(0.95);
         }
 
-        input[type=text] {
+        input[type=text],input[type=number] {
           background-color: #f6f6f6;
           border: none;
           color: #0d0d0d;
@@ -204,6 +206,8 @@ if(isset($_POST['log']))
           transition: all 0.5s ease-in-out;
           -webkit-border-radius: 5px 5px 5px 5px;
           border-radius: 5px 5px 5px 5px;
+          
+          -moz-appearance:textfield;
         }
         
         
@@ -362,13 +366,13 @@ if(isset($_POST['log']))
 
               <!-- Icon -->
               <div class="fadeIn first">
-                  <img src="images/logo.jpg" id="icon" alt="User Icon" />
+                  <img src="images/logo.jpg" id="icon" alt="User Icon" height="150" width="100"/>
                   <h3>Login Here</h3>
               </div>
 
               <!-- Login Form -->
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                  <input type="text" id="login" class="fadeIn second" name="eid" placeholder="Employee ID" required>
+                  <input type="number" id="login" class="fadeIn second" name="eid" placeholder="Employee ID" required>
                   <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password" required>
                   <input type="submit" class="fadeIn fourth" value="Log In" name="log">
               </form>
@@ -382,3 +386,4 @@ if(isset($_POST['log']))
         </div>
     </body>
 </html>
+
