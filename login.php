@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
     <?php
 // Initialize the session
@@ -10,8 +10,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   exit;
 }
  
-// Include config file for connect to database
-require_once "config.php";
+// Include config file
+require_once "./db/config.php";
  
 if(isset($_POST['log']))
     {
@@ -362,7 +362,7 @@ if(isset($_POST['log']))
 
               <!-- Icon -->
               <div class="fadeIn first">
-                  <img src="images/usericon.png" id="icon" alt="User Icon" />
+                  <img src="images/logo.jpg" id="icon" alt="User Icon" />
                   <h3>Login Here</h3>
               </div>
 
@@ -382,4 +382,3 @@ if(isset($_POST['log']))
         </div>
     </body>
 </html>
-
