@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-    require_once "config.php";
+    require_once "./db/config.php";
     
     if(isset($_POST['reg']))
     {
@@ -175,7 +175,7 @@
         }
         
         
-        input[type=password], input[type=email], input[type=number] {
+        input[type=password], input[type=email] {
           background-color: #f6f6f6;
           border: none;
           color: #0d0d0d;
@@ -194,7 +194,55 @@
           transition: all 0.5s ease-in-out;
           -webkit-border-radius: 5px 5px 5px 5px;
           border-radius: 5px 5px 5px 5px;
+          
+          
         }
+        
+        input[type=number] {
+          background-color: #f6f6f6;
+          border: none;
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 80%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          
+          -moz-appearance:textfield;
+          }
+          
+          select{
+          background-color: #f6f6f6;
+          border: none;
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 95%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          
+          -moz-appearance:textfield;
+          }
         
 
         input[type=text]:focus {
@@ -321,6 +369,8 @@
         #icon {
           width:60%;
         }
+        
+        select:invalid { color: gray; }
     </style>
         
         <script>
@@ -361,8 +411,23 @@
                   <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" required>
                   <input type="number" id="mob" class="fadeIn second" name="mob" placeholder="Mobile" required>
                   
-                  <input type="text" id="designation" class="fadeIn second" name="designation" placeholder="Designation" required>
-                  <input type="text" id="branch" class="fadeIn second" name="branch" placeholder="Branch" required>
+                  <!--<input type="text" id="designation" class="fadeIn second" name="designation" placeholder="Designation" required>-->
+                  <!--<input type="text" id="branch" class="fadeIn second" name="branch" placeholder="Branch" required>-->
+                  
+                  <select id="designation" class="fadeIn second" name="designation" required>
+                      <option class="sel" value="" disabled selected hidden>Designation</option>
+                      <option value="Manager">Manager</option>
+                      <option value="Assistant Manager">Assistant Manager</option>
+                      <option value="Employee">Employee</option>
+                  </select>
+                  
+                  <select id="branch" class="fadeIn second" name="branch" required>
+                      <option value="" disabled selected hidden>Branch</option>
+                      <option value="Myer Centre">Myer Centre</option>
+                      <option value="Queens Street">Queens Street</option>
+                      <option value="Kelvin Grove">Kelvin Grove</option>
+                      <option value="Coopers Plains">Coopers Plains</option>
+                  </select>
                   
                   <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Password" required>
                   <input type="password" id="pass1" class="fadeIn third" name="pass1" placeholder="Confirm Password" required>
