@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
     <?php
 // Initialize the session
@@ -67,6 +67,7 @@ if(isset($_POST['log']))
 }
 ?>
 
+<<<<<<< HEAD
 <html>
     <head>
     <style>
@@ -386,3 +387,5 @@ if(isset($_POST['log']))
         </div>
     </body>
 </html>
+=======
+>>>>>>> 10a6259d6bca581cc6bfb122e9b5396acf6a28af
