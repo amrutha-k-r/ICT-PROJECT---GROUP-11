@@ -10,7 +10,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   exit;
 }
  
-// Include config file
+// Include config file for connect to database
 require_once "config.php";
  
 if(isset($_POST['log']))
