@@ -386,4 +386,3 @@ if(isset($_POST['log']))
         </div>
     </body>
 </html>
-
