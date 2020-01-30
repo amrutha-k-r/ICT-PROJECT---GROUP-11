@@ -67,7 +67,7 @@ if(isset($_POST['log']))
 }
 ?>
 
-<<<<<<< HEAD
+
 <html>
     <head>
     <style>
@@ -367,7 +367,7 @@ if(isset($_POST['log']))
 
               <!-- Icon -->
               <div class="fadeIn first">
-                  <img src="images/logo.png" id="icon" alt="User Icon" height="150" width="100"/>
+                  <img src="images/logo.jpg" id="icon" alt="User Icon" height="150" width="100"/>
                   <h3>Login Here</h3>
               </div>
 
@@ -387,5 +387,3 @@ if(isset($_POST['log']))
         </div>
     </body>
 </html>
-=======
->>>>>>> 10a6259d6bca581cc6bfb122e9b5396acf6a28af
