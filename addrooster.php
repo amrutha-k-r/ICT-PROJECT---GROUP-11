@@ -27,7 +27,7 @@
 <html lang="en" >
 	<head>
 		  <meta charset="UTF-8">
-		  <title>TURNOSE</title>
+		  <title>TURNOS</title>
 		  <style>
  html {
             background-color: #dce8f1;
