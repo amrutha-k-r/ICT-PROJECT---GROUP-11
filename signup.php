@@ -425,9 +425,8 @@
                   <select id="branch" class="fadeIn second" name="branch" required>
                       <option value="" disabled selected hidden>Branch</option>
                       <option value="Myer Centre">Myer Centre</option>
-                      <option value="Queens Street">Queens Street</option>
+                      <option value="Queens Street">Queens Plaza</option>
                       <option value="Kelvin Grove">Kelvin Grove</option>
-                      <option value="Coopers Plains">Coopers Plains</option>
                   </select>
                   
                   <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Password" required>
