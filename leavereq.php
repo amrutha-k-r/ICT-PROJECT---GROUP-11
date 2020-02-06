@@ -12,7 +12,7 @@
 <html lang="en" >
 	<head>
 		  <meta charset="UTF-8">
-		  <title>CodePen - Website Header with Bootstrap Carousel</title>
+		  <title>TURNOS</title>
 		  <style>
  html {
             background-color: #dce8f1;
