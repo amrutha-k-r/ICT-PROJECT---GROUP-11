@@ -45,7 +45,7 @@
           font-family: "Poppins", sans-serif;
           height: 100vh;
           background-image: url(images/s_bg.jpg);
-          background-position: center; /* Center the image */
+          background-position: center;
           background-repeat: no-repeat;
         }
 
