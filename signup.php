@@ -33,169 +33,74 @@
     }
     
 ?>
+
 <html>
-    <head>
-    <style>
-        html {
-            background-color: #56baed;
+<head>
+ 
+  <title>Turnos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  <style>
+       select{
+          background-color: #f6f6f6;
+          border: none;
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 80%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          
+          -moz-appearance:textfield;
+          }
+          
+          input[type=password], input[type=email] {
+          background-color: #f6f6f6;
+          border: none;
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 80%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          
+          
         }
-
-        body {
-          font-family: "Poppins", sans-serif;
-          height: 100vh;
-          background-image: url(images/s_bg.jpg);
-          background-position: center; /* Center the image */
-          background-repeat: no-repeat;
-        }
-
-        a {
+        
+         a {
           color: #92badd;
           display:inline-block;
           text-decoration: none;
           font-weight: 400;
-        }
-
-        h2 {
-          text-align: center;
-          font-size: 16px;
-          font-weight: 600;
-          text-transform: uppercase;
-          display:inline-block;
-          margin: 40px 8px 10px 8px; 
-          color: #cccccc;
-        }
-
-
-
-/* STRUCTURE */
-
-        .wrapper {
-          display: flex;
-          align-items: center;
-          flex-direction: column; 
-          justify-content: center;
-          width: 100%;
-          min-height: 100%;
-          padding: 20px;
-        }
-
-        #formContent {
-          -webkit-border-radius: 10px 10px 10px 10px;
-          border-radius: 10px 10px 10px 10px;
-          background: #fff;
-          padding: 30px;
-          width: 90%;
-          max-width: 450px;
-          position: relative;
-          padding: 0px;
-          -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-          box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-          text-align: center;
-        }
-
-        #formFooter {
-          background-color: #f6f6f6;
-          border-top: 1px solid #dce8f1;
-          padding: 25px;
-          text-align: center;
-          -webkit-border-radius: 0 0 10px 10px;
-          border-radius: 0 0 10px 10px;
-        }
-
-
-
-/* TABS */
-
-        h2.inactive {
-          color: #cccccc;
-        }
-
-        h2.active {
-          color: #0d0d0d;
-          border-bottom: 2px solid #5fbae9;
-        }
-
-
-
-/* FORM TYPOGRAPHY*/
-
-        input[type=button], input[type=submit], input[type=reset]  {
-          background-color: #56baed;
-          border: none;
-          color: white;
-          padding: 15px 50px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          text-transform: uppercase;
-          font-size: 13px;
-          -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-          box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-          -webkit-border-radius: 5px 5px 5px 5px;
-          border-radius: 5px 5px 5px 5px;
-          margin: 5px 20px 40px 20px;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-        }
-
-        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-          background-color: #39ace7;
-        }
-
-        input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-          -moz-transform: scale(0.95);
-          -webkit-transform: scale(0.95);
-          -o-transform: scale(0.95);
-          -ms-transform: scale(0.95);
-          transform: scale(0.95);
-        }
-
-        input[type=text] {
-          background-color: #f6f6f6;
-          border: none;
-          color: #0d0d0d;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 5px;
-          width: 80%;
-          border: 2px solid #f6f6f6;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -ms-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-          -webkit-border-radius: 5px 5px 5px 5px;
-          border-radius: 5px 5px 5px 5px;
-        }
-        
-        
-        input[type=password], input[type=email] {
-          background-color: #f6f6f6;
-          border: none;
-          color: #0d0d0d;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 5px;
-          width: 80%;
-          border: 2px solid #f6f6f6;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -ms-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-          -webkit-border-radius: 5px 5px 5px 5px;
-          border-radius: 5px 5px 5px 5px;
-          
-          
         }
         
         input[type=number] {
@@ -221,7 +126,7 @@
           -moz-appearance:textfield;
           }
           
-          select{
+          input[type=text] {
           background-color: #f6f6f6;
           border: none;
           color: #0d0d0d;
@@ -231,7 +136,7 @@
           display: inline-block;
           font-size: 16px;
           margin: 5px;
-          width: 95%;
+          width: 80%;
           border: 2px solid #f6f6f6;
           -webkit-transition: all 0.5s ease-in-out;
           -moz-transition: all 0.5s ease-in-out;
@@ -240,160 +145,69 @@
           transition: all 0.5s ease-in-out;
           -webkit-border-radius: 5px 5px 5px 5px;
           border-radius: 5px 5px 5px 5px;
-          
-          -moz-appearance:textfield;
-          }
-        
-
-        input[type=text]:focus {
-          background-color: #fff;
-          border-bottom: 2px solid #5fbae9;
-        }
-
-        input[type=text]:placeholder {
-          color: #cccccc;
-        }
-
-
-
-/* ANIMATIONS */
-
-/* Simple CSS3 Fade-in-down Animation */
-        .fadeInDown {
-          -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-          -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-        }
-
-        @-webkit-keyframes fadeInDown {
-          0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-          }
-          100% {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none;
-          }
-        }
-
-        @keyframes fadeInDown {
-          0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-          }
-          100% {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none;
-          }
-        }
-
-/* Simple CSS3 Fade-in Animation */
-        @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-        .fadeIn {
-          opacity:0;
-          -webkit-animation:fadeIn ease-in 1;
-          -moz-animation:fadeIn ease-in 1;
-          animation:fadeIn ease-in 1;
-
-          -webkit-animation-fill-mode:forwards;
-          -moz-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;
-
-          -webkit-animation-duration:1s;
-          -moz-animation-duration:1s;
-          animation-duration:1s;
-        }
-
-        .fadeIn.first {
-            -webkit-animation-delay: 0.4s;
-            -moz-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-          }
-
-          .fadeIn.second {
-            -webkit-animation-delay: 0.6s;
-            -moz-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-          }
-
-          .fadeIn.third {
-            -webkit-animation-delay: 0.8s;
-            -moz-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-          }
-
-          .fadeIn.fourth {
-            -webkit-animation-delay: 1s;
-            -moz-animation-delay: 1s;
-            animation-delay: 1s;
-          }
-
-        /* Simple CSS3 Fade-in Animation */
-        .underlineHover:after {
-          display: block;
-          left: 0;
-          bottom: -10px;
-          width: 0;
-          height: 2px;
-          background-color: #56baed;
-          content: "";
-          transition: width 0.2s;
-        }
-
-        .underlineHover:hover {
-          color: #0d0d0d;
-        }
-
-        .underlineHover:hover:after{
-          width: 100%;
-        }
-
-
-
-        /* OTHERS */
-
-        *:focus {
-            outline: none;
-        } 
-
-        #icon {
-          width:60%;
         }
         
         select:invalid { color: gray; }
-    </style>
         
-        <script>
-            function veripass()
-            {
-                p=document.getElementById('pass');
-                q=document.getElementById('pass1');
-                if(p.value==q.value)
-                {
-                    document.getElementById("r1").type="submit";
-                }
-                else
-                {
-                    alert("Password entered are different. It must be same.");
-                    p.focus();
-                    
-                }
-            }
-        </script>
-    </head>
-    <body>
-        
-       <div class="wrapper fadeInDown">
+        input[type=button], input[type=submit], input[type=reset]  {
+          background-color: #56baed;
+          border: none;
+          color: white;
+          padding: 15px 50px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 13px;
+          -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+          box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          margin: 5px 20px 40px 20px;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+  </style> 
+  
+</head>
+<body>
+<section id="menu-4">
+
+<!--    <nav class="navbar navbar-dropdown navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        
+                        <a class="navbar-caption text-black" href="">Turnos</a>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </nav>-->
+
+</section>
+
+<section class="engine"><a rel="external" href=""></a></section><section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
+
+    
+
+    
+
+    <div class="mbr-section mbr-section-nopadding mbr-price-table">
+      <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-12 col-xl-6 col-xl-offset-3">
+                
+                
+<div class="wrapper fadeInDown">
             <div id="formContent">
               <!-- Tabs Titles -->
 
@@ -443,10 +257,53 @@
 
               <!-- Remind Passowrd -->
               <div id="formFooter">
-                <a class="underlineHover" href="index.php">Already Registered?</a>
+                <a class="underlineHover fadeIn second" href="index.php">Already Registered?</a>
               </div>
 
             </div>
         </div>
-    </body>
+</div>
+            </div>
+            
+            
+            
+          </div>
+    </div>
+
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  
+  <script>
+            function veripass()
+            {
+                p=document.getElementById('pass');
+                q=document.getElementById('pass1');
+                if(p.value==q.value)
+                {
+                    document.getElementById("r1").type="submit";
+                }
+                else
+                {
+                    alert("Password entered are different. It must be same.");
+                    p.focus();
+                    
+                }
+            }
+        </script>
+  
+  </body>
 </html>
+
+
