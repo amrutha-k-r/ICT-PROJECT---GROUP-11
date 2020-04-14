@@ -1,6 +1,12 @@
+<!DOCTYPE html>
+
 <?php
-    session_start();
+
+     session_start();
     require_once "./db/config.php";
+    
+//    $ad_branch=$_SESSION['branch'];
+    
     if(isset($_POST['branch_sel']))
     {
         $ad_branch=$_POST['branch_sel'];
@@ -9,32 +15,42 @@
     {
         $ad_branch=$_SESSION['branch'];
     }
+    
+    
     if(isset($_POST['save']))
     {
         $em_id=$_POST['eidd'];
         $r_date=$_POST['r_date'];
-        //$r_shift=$_POST['r_shift'];
-        $r_shift="From ".$_POST['s1'].":".$_POST['s2']." ".$_POST['s3']." To ".$_POST['s4'].":".$_POST['s5']." ".$_POST['s6'];
-        $ass_branch=$_POST['ass_branch'];
+//        $r_shift=$_POST['r_shift'];
+        
+        $r_shift=$_POST['s1'].":".$_POST['s2']." ".$_POST['s3']." - ".$_POST['s4'].":".$_POST['s5']." ".$_POST['s6'];
+        
+        
+        $ass_branch=$_POST['branch'];
         
         $ins_qry="insert into schedule(empid,s_date,shift,branch) values($em_id,'$r_date','$r_shift','$ass_branch')";
         
-        //echo $ins_qry;
+//        echo $ins_qry;
         
         if (mysqli_query($link, $ins_qry)) {
+            
+            
             $message="A new roster has been scheduled. View your roster for further details.";
             $msg_qry="insert into messages(empid,message) values($em_id,'$message')";
             if (mysqli_query($link, $msg_qry)) {
-              echo "<script>alert('New record created successfully');<script>";
+                echo '<script>alert("New record created successfully");<script>';
+                
+                
             }
-            else{
-              echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
             }
+            
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($link);
         }
-        header("location:addroster.php");
         
+        header("location:addroster.php");
     }
 
 ?>
@@ -43,10 +59,10 @@
   <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  
+  <meta name="description" content="Website Maker Description">
   <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -126,17 +142,26 @@
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
                         <li class="nav-item dropdown"><a class="nav-link link" href="admin.php">Home</a></li>
-                        <li class="nav-item dropdown"><a class="nav-link link" href="">Add Employee</a></li>
+                        <li class="nav-item dropdown">
+                            <?php
+                            
+                                if(isset($_SESSION['sup']))
+                                {
+                            ?>
+                                <a class="nav-link link" href="manemp.php">Add Employee</a></li>
+                            <?php
+                                }
+                            ?>
                         <!--<li class="nav-item"><a class="nav-link link" href="">Leave Requests</a></li>-->
-                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">LEAVE</a>
+                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="leavereq.php">Leave Requests</a>
+                                    <a class="dropdown-item" href="leavereq.php">Requests</a>
                                     <a class="dropdown-item" href="denreq.php">Denied</a>
                                     <a class="dropdown-item" href="sanreq.php">Sanctioned</a>
                                     <a class="dropdown-item" href="hisleave.php">History</a>
                                 </div>
                         </li>
-                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">ROSTER</a>
+                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Roster</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="addroster.php">Add Roster</a>
                                     <a class="dropdown-item" href="viewroster.php">Edit Roster</a>
@@ -156,7 +181,7 @@
 
 </section>
 
-<section class="engine"><a rel="external" href=""></a></section>
+<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
@@ -319,9 +344,9 @@
                                                         <select  class="fadeIn first" name="branch_sel" required onchange="this.form.submit()">
                                                             <option value="" disabled selected hidden>Select Branch</option>
                                                             <option value="Myer Centre">Myer Centre</option>
-                                                            <option value="Queens Plaza">Queens Plaza</option>
+                                                            <option value="Queens Street">Queens Street</option>
                                                             <option value="Kelvin Grove">Kelvin Grove</option>
-                                                            
+                                                            <option value="Coopers Plains">Coopers Plains</option>
                                                         </select>
 
                                                         <br>
