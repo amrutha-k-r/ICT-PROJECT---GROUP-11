@@ -130,7 +130,7 @@
                         <!--<li class="nav-item"><a class="nav-link link" href="">Leave Requests</a></li>-->
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">LEAVE</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="leavereq.php">Requests</a>
+                                    <a class="dropdown-item" href="leavereq.php">Leave Requests</a>
                                     <a class="dropdown-item" href="denreq.php">Denied</a>
                                     <a class="dropdown-item" href="sanreq.php">Sanctioned</a>
                                     <a class="dropdown-item" href="hisleave.php">History</a>
