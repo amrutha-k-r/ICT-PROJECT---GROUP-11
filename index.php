@@ -50,12 +50,12 @@ if(isset($_POST['log']))
                         }
                         else if($row['type']==10)
                         {
-                            
-                            header("location:sup.php");
+                            $_SESSION["sup"]="super";
+                            header("location:admin.php");
                         }
                         else
                         {
-                            echo '<script>alert("Contact Your Manager for Login");</script>';
+                            echo '<script>alert("Pleae wait for the approval from your Store manager");</script>';
                             echo '<script>window.location="index.php";</script>';
                         }
                         
@@ -87,14 +87,12 @@ if(isset($_POST['log']))
 ?>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
+ 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  <meta name="description" content="">
-  <title>Turnose</title>
+  <title>Turnos</title>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -109,7 +107,7 @@ if(isset($_POST['log']))
   
 </head>
 <body>
-    <section class="mbr-section" id="msg-box5-3" style="background-color: rgb(193, 138, 32); padding-top: 160px; padding-bottom: 0px;">
+    <section class="mbr-section" id="msg-box5-3" style="background: linear-gradient(to right, #000000 0%,#880725 50%, #B82E1F  100%); padding-top: 40px; padding-bottom: 50px;">
 
     
     <div class="container">
@@ -119,7 +117,8 @@ if(isset($_POST['log']))
               
 
               <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
-                  <h5 class="mbr-section-title display-2"><br>TURNOSE</h5>
+                  <h5 class="mbr-section-title display-2" style="color:	white;"><br>TURNOS</h5>
+                  <p style="color:	white; font-family:pacifico;"><i>Schedule your shifts here!!!!!</i></p>
                   <div class="lead">
 
                     <form action="" method="post">
@@ -137,7 +136,7 @@ if(isset($_POST['log']))
                   <div> 
 <!--                      <a class="fadeIn fourth" href="signup.php">
                           <input type="button" value="Sign Up"></a>-->
-<a class="underlineHover fadeIn fourth" href="signup.php">New User?</a>
+<a class="underlineHover fadeIn fourth" href="signup.php" style="color:white;">New User?  Sign Up here</a>
                   </div>
               </div>
 
@@ -146,7 +145,7 @@ if(isset($_POST['log']))
 
 
               <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 50%;">
-                  <div class="mbr-figure"><img src="assets/images/desktop.jpg"></div>
+                  <div class="mbr-figure"><img src="assets/images/heroimg.jpg"></div>
               </div>
 
             </div>
@@ -156,7 +155,7 @@ if(isset($_POST['log']))
 </section>
 
 
-  <!--<section class="engine"><a rel="external" href="https://mobirise.com">https://mobirise.com/</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>-->
+  
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/smooth-scroll/SmoothScroll.js"></script>
