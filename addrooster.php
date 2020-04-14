@@ -114,7 +114,7 @@
 
                     <div class="navbar-brand">
                         
-                        <a class="navbar-caption text-black" href="">Turnos</a>
+                        <a class="navbar-caption text-black" href="">TURNOS</a>
                     </div>
 
                 </div>
