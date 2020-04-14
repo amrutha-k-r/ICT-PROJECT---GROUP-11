@@ -17,14 +17,15 @@
 ?>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  <meta name="description" content="Website Maker Description">
+  
+  
   <title>Turnos</title>
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -135,29 +136,8 @@
 
 </section>
 
-<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
-<!--<section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
-    
 
-    <div class="mbr-section mbr-section__container mbr-section__container--middle">
-      <div class="container">
-          <div class="row">
-              <div class="col-xs-12 text-xs-center">
-                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>
-
-                
-
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="mbr-section mbr-section-nopadding mbr-price-table">
-      <div class="row">
-            <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-12 col-xl-6 col-xl-offset-3">
-                <div class="mbr-plan card text-xs-center" id="maindiv">-->
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
@@ -166,19 +146,7 @@
       <div class="container">
           <div class="row">
               <div class="col-xs-12 text-xs-center">
-<!--                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>-->
 
-                
-
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="mbr-section mbr-section-nopadding mbr-price-table">
-      <div class="row">
-            <!--<div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-12 col-xl-6 col-xl-offset-3">-->
                 <div class="mbr-plan card text-xs-center" id="maindiv">
 
 
@@ -194,7 +162,7 @@
                         <table align="center" border="0" width="100%">
                         <tr>
                             <td><h4>From</h4><input type="date" class="form-control" name="dfrom" required></td>
-                            <!--<td><h4>To</h4><input type="date" class="form-control" name="dto" required></td>-->
+                            
                             <td><input type="submit"  value="Show Roster" name="showr" ></td>
                         </tr>
                     </table>
@@ -442,7 +410,7 @@ ORDER BY empid";
                                     <option value="Myer Centre">Myer Centre</option>
                                     <option value="Queens Street">Queens Street</option>
                                     <option value="Kelvin Grove">Kelvin Grove</option>
-                                    <option value="Coopers Plains">Coopers Plains</option>
+                                   
                                 </select>
                                 
                                 <br>
