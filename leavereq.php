@@ -27,9 +27,10 @@
                  echo "New record changed successfully";
                  
                 $message="Your leave request processed and approved.";
-                $msg_qry="insert into messages(empid,message) values($em_id,'$message')";
+                $msg_qry="insert into messages(empid,message) values($empid,'$message')";
                 if (mysqli_query($link, $msg_qry)) {
-                    echo '<script>alert("New record created successfully");<script>';
+                    echo '<script>alert("Leave accepted successfully");</script>';
+                    header("location:leavereq.php");
                 }
                 else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($link);
@@ -50,6 +51,7 @@
     if(isset($_POST["decline"]))
     {
         $lid=$_POST['leaveid'];
+        $empid=$_POST['empid'];
         
         $up_qry2="update leave_approve set status=2 where la_id=".$lid;
         
@@ -57,12 +59,13 @@
             echo "New record changed successfully";
             
             $message="Your leave request rejected. Contact manager for further details.";
-            $msg_qry="insert into messages(empid,message) values($em_id,'$message')";
+            $msg_qry="insert into messages(empid,message) values($empid,'$message')";
             if (mysqli_query($link, $msg_qry)) {
-                echo '<script>alert("New record created successfully");<script>';
+                echo '<script>alert("Request declined successfully");</script>';
+                header("location:leavereq.php");
             }
             else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+                echo "<br><br><br><br><br>Error: " . $msg_qry . "<br>" . mysqli_error($link);
             }
             
         } else {
@@ -75,12 +78,13 @@
 ?>
 <html>
 <head>
-  
+  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
- 
+  <meta name="description" content="Website Maker Description">
   <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -161,7 +165,16 @@
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
                         <li class="nav-item dropdown"><a class="nav-link link" href="admin.php">Home</a></li>
-                        <li class="nav-item dropdown"><a class="nav-link link" href="manemp.php">Add Employee</a></li>
+                        <li class="nav-item dropdown">
+                            <?php
+                            
+                                if(isset($_SESSION['sup']))
+                                {
+                            ?>
+                                <a class="nav-link link" href="manemp.php">Add Employee</a></li>
+                            <?php
+                                }
+                            ?>
                         <!--<li class="nav-item"><a class="nav-link link" href="">Leave Requests</a></li>-->
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
                                 <div class="dropdown-menu">
@@ -191,7 +204,7 @@
 
 </section>
 
-<section class="engine"><a rel="external" href=""></a></section>
+<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
