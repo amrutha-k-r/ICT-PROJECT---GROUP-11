@@ -1,90 +1,10 @@
 <!DOCTYPE html>
-<?php
-    session_start();
-    require_once "./db/config.php";
-    
-    $branch=$_SESSION['branch'];
-    
-    
-    
-    if(isset($_POST["accept"]))
-    {
-        $lid=$_POST['leaveid'];
-        $ltype=$_POST['leavetype'];
-        $empid=$_POST['empid'];
-        
-//        echo "<script>alert($ltype);</script>";
-//        echo "<script>alert('$ltype');</script>";
-        
-        $up_qry1="update leave_approve set status=5 where la_id=".$lid;
-        
-        echo$up_qry1;
-        if (mysqli_query($link,  $up_qry1)) {
-            
-            $uqry="update leave_tb set $ltype=$ltype-1 where empid=$empid";
-            
-             if (mysqli_query($link,  $uqry)) {
-                 echo "New record changed successfully";
-                 
-                $message="Your leave request processed and approved.";
-                $msg_qry="insert into messages(empid,message) values($empid,'$message')";
-                if (mysqli_query($link, $msg_qry)) {
-                    echo '<script>alert("Leave accepted successfully");</script>';
-                    header("location:leavereq.php");
-                }
-                else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($link);
-                }
-             }
-             else
-             {
-                 echo "<script>alert('$uqry');</script>";
-             }
-            
-                        
-        } else {
-            echo "Error: " .$up_qry1 . "<br>" . mysqli_error($link);
-        }
-        
-//         mysqli_close($link);
-    }
-    if(isset($_POST["decline"]))
-    {
-        $lid=$_POST['leaveid'];
-        $empid=$_POST['empid'];
-        
-        $up_qry2="update leave_approve set status=2 where la_id=".$lid;
-        
-        if (mysqli_query($link,  $up_qry2)) {
-            echo "New record changed successfully";
-            
-            $message="Your leave request rejected. Contact manager for further details.";
-            $msg_qry="insert into messages(empid,message) values($empid,'$message')";
-            if (mysqli_query($link, $msg_qry)) {
-                echo '<script>alert("Request declined successfully");</script>';
-                header("location:leavereq.php");
-            }
-            else {
-                echo "<br><br><br><br><br>Error: " . $msg_qry . "<br>" . mysqli_error($link);
-            }
-            
-        } else {
-            echo "Error: " .$up_qry2 . "<br>" . mysqli_error($link);
-        }
-        
-//         mysqli_close($link);
-    }
-    
-?>
+
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  <meta name="description" content="Website Maker Description">
   <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -204,7 +124,6 @@
 
 </section>
 
-<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
@@ -225,7 +144,7 @@
 
     <div class="mbr-section mbr-section-nopadding mbr-price-table">
       <div class="row">
-            <!--<div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-12 col-xl-6 col-xl-offset-3">-->
+
                 <div class="mbr-plan card text-xs-center" id="maindiv">
 
                 <form method="post" id="fid">
@@ -248,42 +167,21 @@
                                 
                         </tr>
                         
-                        <?php
-
-                            $qr_sel="SELECT * FROM `leave_approve` WHERE status=0 and l_branch='$branch' ORDER by la_id desc ";
-//                            echo $qry;
-                           if( $result = mysqli_query($link, $qr_sel))
-                            
-                           { 
-
-//                            if (mysqli_num_rows($result) > 0) {
-                                // output data of each row
-                    //            echo "here";
-                                while($row = mysqli_fetch_array($result)) {
-                                    
-                                    $qr_na="select name from employee where id=".$row['empid'];
-                                    $na_re= mysqli_query($link, $qr_na);
-                                    if (mysqli_num_rows($na_re) > 0) {
-                                        while($na_row = mysqli_fetch_array($na_re)) {
-                                    
-                                            
-                                     
-
-                        ?>
+                        
                                             
                         <tr class="trr1">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                                         <td>
-                                            <?php echo $na_row['name'];?>  
-                                            <input type="hidden" name="leaveid" value="<?php echo $row['la_id']; ?>">
-                                            <input type="hidden" name="empid" value="<?php echo $row['empid']; ?>">
+                                             
+                                            <input type="hidden" name="leaveid" value="">
+                                            <input type="hidden" name="empid" value="">
                                         </td>
-                                        <td><?php echo $row['l_date'];?></td>
-                                        <td><?php echo $row['l_type'];?>
-                                            <input type="hidden" name="leavetype" value="<?php echo $row['l_type'];?>">
+                                        <td></td>
+                                        <td>
+                                            <input type="hidden" name="leavetype" value="">
                                             </td>
 
-                                        <td><?php echo $row['l_balance'];?></td>
+                                        <td></td>
                                         
 <!--                                        <td>
                                              <input type="text" name="msg" value="">                                                 
@@ -296,17 +194,7 @@
                         </form>
                     </tr>
                     
-                    <?php
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                echo mysqli_error($link);
-                            }
-                    ?>
-                            
+         
                         
                     </table>					
 				
