@@ -136,7 +136,7 @@
                         <li class="nav-item dropdown"><a class="nav-link link" href="home.php">Home</a></li>
                         <li class="nav-item dropdown"><a class="nav-link link" href="timecard.php">Timecard</a></li>
                         <li class="nav-item"><a class="nav-link link" href="eroster.php">Roster</a></li>
-                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">LEAVE</a>
+                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="addreq.php">Add Requests</a>
 <!--                                    <a class="dropdown-item" href="denreq.php">Denied</a>
@@ -173,8 +173,7 @@
       <div class="container">
           <div class="row">
               <div class="col-xs-12 text-xs-center">
-<!--                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>-->
+
 
                 
 
