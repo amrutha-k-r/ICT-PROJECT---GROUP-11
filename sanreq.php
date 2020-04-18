@@ -9,7 +9,6 @@
 ?>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
@@ -144,8 +143,7 @@
       <div class="container">
           <div class="row">
               <div class="col-xs-12 text-xs-center">
-<!--                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>-->
+
 
                 
 
