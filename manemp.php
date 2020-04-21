@@ -222,8 +222,8 @@
                 <form method="post" id="fid">
                     
                     <caption>
-                        <h1><?php echo $branch; ?></h1>
-                        <h3>Employees</h3>
+                        <!--<h1><?php echo $branch; ?></h1>-->
+                        <h3>Employee Requests</h3>
                     </caption>
                     
                     <table align="center" cellpadding="8px" cellspacing="2px" style="width: 100%" >                       
