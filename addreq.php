@@ -39,7 +39,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Turnose</title>
+  <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -74,7 +74,7 @@
            
        }
         th{
-            background-color: #999900;
+           /* background-color: none;*/
             height: 35px;
             font-size: x-large;
         }
@@ -119,7 +119,7 @@
 
                     <div class="navbar-brand">
                         
-                        <a class="navbar-caption text-black" href="">Turnose</a>
+                        <a class="navbar-caption text-black" href="">Turnos</a>
                     </div>
 
                 </div>
@@ -161,7 +161,7 @@
 
 </section>
 
-<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
+
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
@@ -191,19 +191,11 @@
                     
                     <caption>
                         <h1><?php echo $sname; ?></h1>
-                        <h3><b>Leave Availability</b></h3>
+                        <h3><b>Request Leave</b></h3>
                     </caption>
                     
                     <table align="center" cellpadding="8px" cellspacing="2px" style="width: 100%" >                       
                         
-                        <tr>
-                            <th align="center">Casual Leave</th>
-                            <th align="center">Sick Leave</th>
-
-                            <th align="center">Anual Leave</th>
-                            <!--<th align="center">Shift</th>-->
-                                <!--<th>Assign to</th>-->
-                        </tr>
                         
                         <?php
                         
