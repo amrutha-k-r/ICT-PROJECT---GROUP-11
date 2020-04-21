@@ -190,7 +190,7 @@
                     <form method="post" id="fid" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     
                     <caption>
-                        <h1><?php echo $sname; ?></h1>
+                        <!--<h1><?php echo $sname; ?></h1>-->
                         <h3><b>Request Leave</b></h3>
                     </caption>
                     
