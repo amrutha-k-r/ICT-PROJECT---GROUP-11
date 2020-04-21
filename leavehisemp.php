@@ -84,7 +84,7 @@
                     </button>
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
-                        <li class="nav-item dropdown"><a class="nav-link link" href="home.php">Home</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link link" href="emphome.php">Home</a></li>
                         <li class="nav-item dropdown"><a class="nav-link link" href="timecard.php">Timecard</a></li>
                         <li class="nav-item"><a class="nav-link link" href="eroster.php">Roster</a></li>
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
