@@ -95,7 +95,7 @@
                                     <a class="dropdown-item" href="leavehis.php">History</a>
                                 </div>
                         </li>
-<!--                        
+                     
                         <li class="nav-item nav-btn"><a class="nav-link btn btn-success-outline btn-success" href="logout.php">Log Out</a></li>
                     </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
