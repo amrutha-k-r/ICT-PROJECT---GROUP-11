@@ -35,14 +35,12 @@
 ?>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
   <meta name="description" content="Website Maker Description">
-  <title>Turnose</title>
+  <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -189,7 +187,7 @@
 
                     <div class="navbar-brand">
                         
-                        <a class="navbar-caption text-black" href="">Turnose</a>
+                        <a class="navbar-caption text-black" href="">Turnos</a>
                     </div>
 
                 </div>
@@ -243,9 +241,9 @@
                   <select id="branch" class="fadeIn second" name="branch" required>
                       <option value="" disabled selected hidden>Branch</option>
                       <option value="Myer Centre">Myer Centre</option>
-                      <option value="Queens Street">Queens Street</option>
+                      <option value="Queens Street">Queens Plaza</option>
                       <option value="Kelvin Grove">Kelvin Grove</option>
-                      <option value="Coopers Plains">Coopers Plains</option>
+                     
                   </select>
                   
                   <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Password" required>
