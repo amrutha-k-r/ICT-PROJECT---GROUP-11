@@ -11,10 +11,10 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  <meta name="description" content="Website Maker Description">
+
   <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -89,8 +89,7 @@
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">LEAVE</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="addreq.php">Add Requests</a>
-<!--                                    <a class="dropdown-item" href="denreq.php">Denied</a>
-                                    <a class="dropdown-item" href="sanreq.php">Sanctioned</a>-->
+
                                     <a class="dropdown-item" href="leavehis.php">History</a>
                                 </div>
                         </li>
@@ -114,7 +113,7 @@
 
 </section>
 
-<section class="engine"><a rel="external" href="">Web Page Builder</a></section>
+
 <section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
@@ -123,8 +122,7 @@
       <div class="container">
           <div class="row">
               <div class="col-xs-12 text-xs-center">
-<!--                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>-->
+
 
                 
 
