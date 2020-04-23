@@ -169,8 +169,7 @@
                             <?php
                                 }
                             ?>
-                        </li>
-                        <!--<li class="nav-item"><a class="nav-link link" href="">Leave Requests</a></li>-->
+               
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="leavereq.php">Requests</a>
