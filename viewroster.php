@@ -219,8 +219,7 @@
       <div class="container">
           <div class="row">
               <div class="col-xs-12 text-xs-center">
-<!--                  <h3 class="mbr-section-title display-2">PRICING TABLE</h3>
-                  <small class="mbr-section-subtitle">Pricing table with four columns and solid color background.</small>-->
+
 
                 
 
