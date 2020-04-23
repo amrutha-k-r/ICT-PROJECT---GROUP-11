@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-
+<?php
+    session_start();
+    require_once "./db/config.php";
+    
+    $branch=$_SESSION['branch'];
+    $id=$_SESSION['id'];
+    $sname=$_SESSION['name'];
+    
+?>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -149,7 +157,45 @@
                                 <th>Assign to</th>
                         </tr>-->
                         
-                       
+                        <?php
+                        
+//                            $sl=0;
+//                            $cl=0;
+//                            $al=0;
+                              $i=1;
+                            $qry_lv="SELECT message FROM `messages` WHERE empid=$id order by mid desc";
+//                            echo $qry_lv;
+                            $result_lv = mysqli_query($link, $qry_lv);
+
+                            if (mysqli_num_rows($result_lv) > 0) {
+                                // output data of each row
+                    //            echo "here";
+                                while($row_lv = mysqli_fetch_array($result_lv)) {
+
+//                                     $det_sel_qry="select name , branch from employee where id=". $row['empid'];
+//                                                         echo $det_sel_qry;
+//                                     $res_em=mysqli_query($link, $det_sel_qry);
+//                                     if (mysqli_num_rows($res_em) > 0) {
+
+//                                        while($emrow = mysqli_fetch_array($res_em)) {
+
+                        ?>
+                                            
+                        <tr class="trr1">
+                                        
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row_lv[0]; ?>
+                                        </td>
+
+                      <?php   
+                                
+                                $i=$i+1;
+                                }
+                            }
+                    ?>
                             
                         </tr>
                     </table>
