@@ -91,8 +91,7 @@
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="" aria-expanded="false">Leave</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="addreq.php">Add Requests</a>
-<!--                                    <a class="dropdown-item" href="denreq.php">Denied</a>
-                                    <a class="dropdown-item" href="sanreq.php">Sanctioned</a>-->
+
                                     <a class="dropdown-item" href="leavehis.php">History</a>
                                 </div>
                         </li>
@@ -146,7 +145,7 @@
                             <th align="center">Date</th>
                             <th align="center">Shift</th>
                                 <!--<th>Assign to</th>-->
-                        </tr>
+                     
                         
                         <?php
 
