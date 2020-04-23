@@ -39,7 +39,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
-  <meta name="description" content="Website Maker Description">
+
   <title>Turnos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -199,7 +199,7 @@
 
 </section>
 
-<section class="engine"><a rel="external" href="">Web Page Builder</a></section><section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
+<section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
     
 
