@@ -228,8 +228,7 @@
                                             echo $cl; ?>                                                              
                                         </td>
                                         <td><?php echo $row_lv[3];$sl=$row_lv[3]; ?></td>
-                                        <td><?php echo $row_lv[4];$al=$row_lv[4]; ?>
-                                            </td>
+                                       
 
                       <?php           
                                 }
