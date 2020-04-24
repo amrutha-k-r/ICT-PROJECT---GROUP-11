@@ -177,31 +177,42 @@
   
 </head>
 <body>
-<section id="menu-4">
+<section class="mbr-section" id="msg-box5-3" style="background-color: rgb(255,255,254); padding-top: 0px; padding-bottom: 0px;">
 
-<!--    <nav class="navbar navbar-dropdown navbar-fixed-top">
-        <div class="container">
+    
+    <div class="container">
+        <div class="row">
+            <div class="mbr-table-md-up">
 
-            <div class="mbr-table">
-                <div class="mbr-table-cell">
+              
 
-                    <div class="navbar-brand">
-                        
-                        <a class="navbar-caption text-black" href="">Turnos</a>
-                    </div>
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
+                  <h5 class="mbr-section-title display-2" id="hh" style="text-align:center;"><br>TURNOS</h5>
+				  
+                  <div class="lead">
 
-                </div>
-                
+                    
+
+                  </div>
+
+                  <div> 
+                     
+
+                  </div>
+              </div>
+
+
+
             </div>
-
         </div>
-    </nav>-->
+    </div>
 
 </section>
 
-<section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 120px; padding-bottom: 120px;">
 
-    
+<section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 30px; padding-bottom: 120px;">
+
+<section class="engine"><a rel="external" href=""></a></section><section class="mbr-section mbr-after-navbar" id="pricing-table2-6" style="background-color: rgb(250, 197, 28); padding-top: 30px; padding-bottom: 120px;">  
 
     
 
@@ -217,7 +228,7 @@
               <!-- Icon -->
               <div class="fadeIn first">
                   <!--<img src="images/logo.jpg" id="icon" alt="User Icon" height="50" width="50" />-->
-                  <h3>Sign Up Here</h3>
+                  <h4 style="color:rgb(0,0,0);"><b>Sign Up</b></h4><i class='fas fa-user-edit'></i><br>
               </div>
 
               <!-- Login Form -->
