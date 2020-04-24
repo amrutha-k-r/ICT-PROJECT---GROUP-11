@@ -295,6 +295,7 @@
   <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
   <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
   
   <input name="animation" type="hidden">
