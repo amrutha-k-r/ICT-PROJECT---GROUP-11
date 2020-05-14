@@ -27,8 +27,9 @@
         
         
         $ass_branch=$_POST['branch'];
+        $msg=$_POST['message'];
         
-        $ins_qry="insert into schedule(empid,s_date,shift,branch) values($em_id,'$r_date','$r_shift','$ass_branch')";
+        $ins_qry="insert into schedule(empid,s_date,shift,branch,msg) values($em_id,'$r_date','$r_shift','$ass_branch','$msg')";
         
 //        echo $ins_qry;
         
@@ -211,6 +212,7 @@
                                                 <!--<th width="20%">Branch</th>-->
                                                 <th >Date</th>
                                                 <th >Shift</th>
+                                                <th>Message</th>
                                                 <!--<th>Assign to</th>-->
                                                 <th >Save</th>
                                                 
