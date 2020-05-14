@@ -316,6 +316,7 @@
                                                                     <option value="Coopers Plains">Coopers Plains</option>
                                                                 </select>
                                                             </td>-->
+                                                            <input type="text" class="textclass" name="message" value="" placeholder="Message if any">
 
                                                             <td><input type="submit" value="Save" name="save" id="green"></td>
 
