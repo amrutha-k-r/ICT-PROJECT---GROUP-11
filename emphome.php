@@ -74,6 +74,7 @@
                     <div class="navbar-brand">
                         
                         <a class="navbar-caption text-black" href="">Turnos</a>
+                        <li class="nav-item nav-btn"><h5 style="color: #FF9900;">Welcome <?php echo $_SESSION['name']; ?>..<i class='far fa-smile'></i></h5></li>
                     </div>
 
                 </div>
@@ -198,6 +199,7 @@
   <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
   <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
   
   <input name="animation" type="hidden">
