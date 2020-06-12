@@ -138,10 +138,7 @@ if(isset($_POST['log']))
                           <input type="button" value="Sign Up"></a>-->
 <a class="underlineHover fadeIn fourth" href="signup.php" style="color:white;">New User?  Sign Up here</a>
                   </div>
-              </div>
-
-
-              
+              </div>              
 
 
               <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 50%;">
